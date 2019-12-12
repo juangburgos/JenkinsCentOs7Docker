@@ -16,5 +16,10 @@ FROM centos:centos7
 Build by changing to this directory and:
 
 ```bash
+chmod +x install-plugins.sh
+chmod +x jenkins.sh
+chmod +x jenkins-support
+chmod +x plugins.sh
+chmod +x tini-shim.sh
 docker build --rm -t juangburgos/jenkins-centos7
 ```
