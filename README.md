@@ -21,5 +21,14 @@ chmod +x jenkins.sh
 chmod +x jenkins-support
 chmod +x plugins.sh
 chmod +x tini-shim.sh
-docker build --rm -t juangburgos/jenkins-centos7
+docker build --rm -t juangburgos/jenkins-centos7 .
+```
+
+## Jenkings CentOS7 Docker with Qt
+
+First build the previous *Dockerfile* first to use it as a base.
+
+```bash
+cd qt5.13.2
+docker build --rm -t juangburgos/jenkins-centos7-qt5.13.2 .
 ```
