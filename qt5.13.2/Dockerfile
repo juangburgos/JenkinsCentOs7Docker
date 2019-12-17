@@ -61,6 +61,15 @@ ln -s /opt/Qt5.13.2/5.13.2/gcc_64/bin/qmake /usr/bin/qmake && \
 ln -s /opt/Qt5.13.2/5.13.2/gcc_64/bin/linuxdeployqt /usr/bin/linuxdeployqt && \
 ln -s /opt/QtIFW-3.1.1/bin/binarycreator /usr/bin/binarycreator
 
+# install jq to ba able to parse REST API responses from bash
+RUN cd /tmp/downloads && \ 
+wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && \
+mv jq-linux64 /usr/bin/jq && \
+chmod +x /usr/bin/jq
+
+# cleanup
+RUN rm -rf /tmp/downloads
+
 # set jenkins user back
 USER ${user}
 
