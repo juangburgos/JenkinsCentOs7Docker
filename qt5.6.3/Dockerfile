@@ -34,7 +34,9 @@ RUN cd /tmp/downloads && \
 yum install -y unixODBC-2.3.1-14.el7.x86_64.rpm && \
 yum install -y libxkbcommon-x11-0.7.1-3.el7.x86_64.rpm && \
 yum install -y postgresql-libs-9.2.24-1.el7_5.x86_64.rpm && \
-yum install -y mysql-libs-5.1.73-8.el6_8.x86_64.rpm
+yum install -y mysql-libs-5.1.73-8.el6_8.x86_64.rpm && \
+yum install -y pulseaudio-libs-devel && \
+yum install -y gstreamer-plugins-base
 
 # newer cmake
 RUN cd /tmp/downloads && \
