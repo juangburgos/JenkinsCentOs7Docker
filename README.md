@@ -28,6 +28,15 @@ docker build --rm -t juangburgos/jenkins-centos7 .
 
 First build the previous *Dockerfile* first to use it as a base.
 
+### With Qt 5.6.3
+
+```bash
+cd qt5.6.3
+docker build --rm -t juangburgos/jenkins-centos7-qt5.6.3 .
+```
+
+### With Qt 5.13.2
+
 ```bash
 cd qt5.13.2
 docker build --rm -t juangburgos/jenkins-centos7-qt5.13.2 .
