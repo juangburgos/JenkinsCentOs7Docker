@@ -12,8 +12,7 @@ wget https://download.qt.io/official_releases/qt-installer-framework/3.1.1/QtIns
 wget https://github.com/probonopd/linuxdeployqt/releases/download/6/linuxdeployqt-6-x86_64.AppImage && \
 wget http://mirror.centos.org/centos/7/os/x86_64/Packages/unixODBC-2.3.1-14.el7.x86_64.rpm && \
 wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libxkbcommon-x11-0.7.1-3.el7.x86_64.rpm && \
-wget http://mirror.centos.org/centos/7/os/x86_64/Packages/postgresql-libs-9.2.24-1.el7_5.x86_64.rpm && \
-wget http://mirror.centos.org/centos/6/os/x86_64/Packages/mysql-libs-5.1.73-8.el6_8.x86_64.rpm && \
+wget http://mirror.centos.org/centos/7/os/x86_64/Packages/postgresql-devel-9.2.24-4.el7_8.x86_64.rpm && \
 wget https://www.mirrorservice.org/sites/dl.fedoraproject.org/pub/epel/7/x86_64/Packages/p/p7zip-16.02-10.el7.x86_64.rpm && \
 wget https://www.mirrorservice.org/sites/dl.fedoraproject.org/pub/epel/7/x86_64/Packages/p/p7zip-plugins-16.02-10.el7.x86_64.rpm && \
 wget https://cmake.org/files/v3.6/cmake-3.6.2.tar.gz
@@ -35,12 +34,12 @@ ncurses-devel
 RUN cd /tmp/downloads && \
 yum install -y unixODBC-2.3.1-14.el7.x86_64.rpm && \
 yum install -y libxkbcommon-x11-0.7.1-3.el7.x86_64.rpm && \
-yum install -y postgresql-libs-9.2.24-1.el7_5.x86_64.rpm && \
-yum install -y mysql-libs-5.1.73-8.el6_8.x86_64.rpm  && \
+yum install -y postgresql-devel-9.2.24-4.el7_8.x86_64.rpm && \
 yum install -y p7zip-16.02-10.el7.x86_64.rpm && \
 yum install -y p7zip-plugins-16.02-10.el7.x86_64.rpm && \
 yum install -y pulseaudio-libs-devel && \
-yum install -y gstreamer-plugins-base
+yum install -y gstreamer-plugins-base && \
+yum install -y mariadb-devel
 
 # newer cmake
 RUN cd /tmp/downloads && \
